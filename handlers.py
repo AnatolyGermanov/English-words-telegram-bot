@@ -24,7 +24,7 @@ async def main():
 
 
 async def reminder():
-    users = db.get_all_users_to_send_reminder()
+    users = db.get_all_users_to_send_reminder(2)
     if users is None:
         return
 
