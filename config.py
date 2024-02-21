@@ -5,7 +5,6 @@ API_TOKEN = os.environ.get('API_TOKEN')
 WEB_HOOK_URL = os.environ.get('WEB_HOOK_URL')
 TELEGRAM_API_URL = f'https://api.telegram.org/bot{API_TOKEN}'
 APP_PORT = os.environ.get('APP_PORT')
-APP_HOST = os.environ.get('APP_HOST')
 
 # Database config
 DB_USER = os.environ.get('DB_USER')

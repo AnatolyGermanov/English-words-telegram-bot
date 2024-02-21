@@ -44,7 +44,8 @@ def receive_update():
     if handler:
         handler()
 
-    return "ok", 200
+    # return "ok", 200
+    return "Hello world"
 
 
 if __name__ == '__main__':
@@ -54,4 +55,4 @@ if __name__ == '__main__':
 
     threading.Thread(target=asyncio.run, kwargs={"main": main()}).start()
 
-    app.run(host=APP_HOST, port=APP_PORT)
+    app.run(port=APP_PORT)
