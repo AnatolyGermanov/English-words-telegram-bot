@@ -15,8 +15,6 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def receive_update():
-    print(request.json)
-
     msg_text = request.json.get('message', {}).get('text')
     command_handler = command_handlers.get(msg_text)
     if command_handler:
@@ -53,9 +51,7 @@ if __name__ == '__main__':
     bot.deleteWebhook()
     time.sleep(1)
     response = bot.setWebhook(WEB_HOOK_URL)
-    print(response)
-    print(WEB_HOOK_URL)
-    print(TELEGRAM_API_URL)
+
     threading.Thread(target=asyncio.run, kwargs={"main": main()}).start()
 
     app.run()
