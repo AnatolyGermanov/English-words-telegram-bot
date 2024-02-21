@@ -20,7 +20,7 @@ db = Database(db_user=DB_USER, db_password=DB_PASSWORD, db_host=DB_HOST, db_port
 async def main():
     while True:
         await reminder()
-        await asyncio.sleep(1)
+        await asyncio.sleep(60)
 
 
 async def reminder():
