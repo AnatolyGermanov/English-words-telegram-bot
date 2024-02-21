@@ -54,6 +54,7 @@ if __name__ == '__main__':
     time.sleep(1)
     response = bot.setWebhook(WEB_HOOK_URL)
     print(response)
+    print(WEB_HOOK_URL)
     threading.Thread(target=asyncio.run, kwargs={"main": main()}).start()
 
     app.run(host=APP_HOST, port=APP_PORT)
