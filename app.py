@@ -55,4 +55,4 @@ if __name__ == '__main__':
 
     # threading.Thread(target=asyncio.run, kwargs={"main": main()}).start()
 
-    app.run(port=APP_PORT)
+    # app.run(port=APP_PORT)
