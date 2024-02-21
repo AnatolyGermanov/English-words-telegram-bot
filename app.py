@@ -5,7 +5,7 @@ import time
 from flask import Flask, request
 from dotenv import load_dotenv
 
-load_dotenv('.env')
+# load_dotenv('.env')
 
 from config import APP_HOST, APP_PORT, WEB_HOOK_URL
 from handlers import command_handlers, callback_handlers, handlers, db, bot, main
