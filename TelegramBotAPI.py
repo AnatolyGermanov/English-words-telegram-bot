@@ -11,7 +11,8 @@ class TelegramBot:
         requests.post(f'{self.telegram_api_url}/deleteWebhook')
 
     def setWebhook(self, url):
-        requests.post(f'{self.telegram_api_url}/setWebhook', {"url": url})
+        response = requests.post(f'{self.telegram_api_url}/setWebhook', {"url": url})
+        print(response.json())
 
     def sendMessage(self, chat_id, text, reply_markup=None, parse_mode=None):
         data = {
