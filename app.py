@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 # load_dotenv('.env')
 
-from config import WEB_HOOK_URL, TELEGRAM_API_URL, APP_PORT, APP_HOST
+from config import WEB_HOOK_URL, APP_PORT
 from handlers import command_handlers, callback_handlers, handlers, db, bot, main
 
 app = Flask(__name__)
