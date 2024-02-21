@@ -2,8 +2,6 @@ import os
 
 # Bot and server config
 API_TOKEN = os.environ.get('API_TOKEN')
-APP_HOST = os.environ.get('APP_HOST')
-APP_PORT = os.environ.get('APP_PORT')
 WEB_HOOK_URL = os.environ.get('WEB_HOOK_URL')
 TELEGRAM_API_URL = f'https://api.telegram.org/bot{API_TOKEN}'
 

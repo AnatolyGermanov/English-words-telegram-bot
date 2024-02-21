@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 # load_dotenv('.env')
 
-from config import APP_HOST, APP_PORT, WEB_HOOK_URL, TELEGRAM_API_URL
+from config import WEB_HOOK_URL, TELEGRAM_API_URL
 from handlers import command_handlers, callback_handlers, handlers, db, bot, main
 
 app = Flask(__name__)
@@ -58,4 +58,4 @@ if __name__ == '__main__':
     print(TELEGRAM_API_URL)
     threading.Thread(target=asyncio.run, kwargs={"main": main()}).start()
 
-    app.run(host=APP_HOST, port=APP_PORT)
+    app.run()
