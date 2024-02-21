@@ -13,7 +13,7 @@ from handlers import command_handlers, callback_handlers, handlers, db, bot, mai
 app = Flask(__name__)
 
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/', methods=['POST'])
 def receive_update():
     msg_text = request.json.get('message', {}).get('text')
     command_handler = command_handlers.get(msg_text)
@@ -44,8 +44,7 @@ def receive_update():
     if handler:
         handler()
 
-    # return "ok", 200
-    return "Hello world"
+    return "ok", 200
 
 
 if __name__ == '__main__':
@@ -53,6 +52,6 @@ if __name__ == '__main__':
     time.sleep(1)
     response = bot.setWebhook(WEB_HOOK_URL)
 
-    # threading.Thread(target=asyncio.run, kwargs={"main": main()}).start()
+    threading.Thread(target=asyncio.run, kwargs={"main": main()}).start()
 
     app.run(host=APP_HOST, port=APP_PORT)
