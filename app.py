@@ -13,7 +13,7 @@ from handlers import command_handlers, callback_handlers, handlers, db, bot, mai
 app = Flask(__name__)
 
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['POST', 'GET'])
 def receive_update():
     msg_text = request.json.get('message', {}).get('text')
     command_handler = command_handlers.get(msg_text)
