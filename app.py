@@ -52,8 +52,8 @@ def receive_update():
 if __name__ == '__main__':
     bot.deleteWebhook()
     time.sleep(1)
-    bot.setWebhook(WEB_HOOK_URL)
-
+    response = bot.setWebhook(WEB_HOOK_URL)
+    print(response)
     threading.Thread(target=asyncio.run, kwargs={"main": main()}).start()
 
     app.run(host=APP_HOST, port=APP_PORT)
